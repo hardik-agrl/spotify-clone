@@ -1,0 +1,168 @@
+*{
+    /* background-color: black; */
+}
+.flex {
+    display: flex;
+
+}
+
+.redBorder {
+    border: 2px red solid;
+}
+
+.logo{
+    position: relative;
+    left: -83px;
+}
+
+.homeButton {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #212121; */
+}
+
+.homelogo{
+    height: 24px;
+}
+
+.homelogo:hover{
+    height: 26px;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    height: 51px;
+    align-items: center;
+    background-color: #1add49;
+
+}
+.search{
+    position: relative;
+    display: flex
+;
+}
+.searchbar{
+    
+    width: 476px;
+    border-radius: 19%;
+    border: 2px black solid;
+    height: -webkit-fill-available;
+    /* background-color: #212121; */
+
+}
+
+.search:hover .searchLogo{
+    display: none;
+}
+
+.searchLogo{
+    display: block;
+position: absolute;
+left: -2px;
+    top: 2px;
+z-index: 1;
+}
+
+.signup{
+    height: 49px;
+    width: 80px;
+    background-color: #1add49;
+    /* color: white; */
+    border: none;
+}
+
+.signup:hover{
+    font-size: large;
+}
+
+.login{
+    height: 51px;
+    width: 80px;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+}
+
+.login:hover{
+    font-size: large;
+}
+
+
+
+
+
+.left{
+    min-width: 25%;
+    min-height: 90vh;
+    position: relative;
+
+}
+
+.library{
+    align-items: center;
+}
+
+.libraryLogo{
+    height: 41px;
+}
+
+.library h2{
+    margin-left: 30px;;
+}
+.footer ul li{
+    text-decoration: none;
+    list-style: none;
+}
+.list{
+    font-size: small;
+    margin: none;
+    gap: 17px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.playlistImg{
+    height: 192px;
+    margin: 0px 20px;
+    
+}
+.playlistInfo{
+    /* width: 196px; */
+    margin: 0px 20px;
+}
+
+.singlePlaylist{
+    border: 2px black solid;
+    margin: 10px 10px;
+    position: relative;
+}
+
+.play{
+    flex-wrap: wrap;
+    
+    /* max-height: 100vh; */
+    /* overflow: scroll; */
+}
+
+.playButton{
+    position: absolute;
+    left: 188px;
+    top: 230px;
+    display: none;
+}
+
+.singlePlaylist:hover .playButton{
+    transition-duration: 100ms;
+    display: block;
+    position: absolute;
+    left: 164px;
+    top: 145px;
+    height:43px
+}
