@@ -1,6 +1,7 @@
-*{
+* {
     /* background-color: black; */
 }
+
 .flex {
     display: flex;
 
@@ -10,7 +11,11 @@
     border: 2px red solid;
 }
 
-.logo{
+.blackBorder {
+    border: 2px black solid;
+}
+
+.logo {
     position: relative;
     left: -83px;
 }
@@ -25,11 +30,11 @@
     /* background-color: #212121; */
 }
 
-.homelogo{
+.homelogo {
     height: 24px;
 }
 
-.homelogo:hover{
+.homelogo:hover {
     height: 26px;
 }
 
@@ -43,34 +48,35 @@
     background-color: #1add49;
 
 }
-.search{
+
+.search {
     position: relative;
-    display: flex
-;
+    display: flex;
 }
-.searchbar{
-    
+
+.searchbar {
+    height: 44px;
     width: 476px;
-    border-radius: 19%;
+    border-radius: 30px;
     border: 2px black solid;
     height: -webkit-fill-available;
     /* background-color: #212121; */
 
 }
 
-.search:hover .searchLogo{
+.search:hover .searchLogo {
     display: none;
 }
 
-.searchLogo{
+.searchLogo {
     display: block;
-position: absolute;
-left: -2px;
+    position: absolute;
+    left: -2px;
     top: 2px;
-z-index: 1;
+    z-index: 1;
 }
 
-.signup{
+.signup {
     height: 49px;
     width: 80px;
     background-color: #1add49;
@@ -78,11 +84,11 @@ z-index: 1;
     border: none;
 }
 
-.signup:hover{
+.signup:hover {
     font-size: large;
 }
 
-.login{
+.login {
     height: 51px;
     width: 80px;
     background-color: white;
@@ -90,7 +96,7 @@ z-index: 1;
     border-radius: 30px;
 }
 
-.login:hover{
+.login:hover {
     font-size: large;
 }
 
@@ -98,29 +104,32 @@ z-index: 1;
 
 
 
-.left{
+.left {
     min-width: 25%;
     min-height: 90vh;
     position: relative;
 
 }
 
-.library{
+.library {
     align-items: center;
 }
 
-.libraryLogo{
+.libraryLogo {
     height: 41px;
 }
 
-.library h2{
-    margin-left: 30px;;
+.library h2 {
+    margin-left: 30px;
+    ;
 }
-.footer ul li{
+
+.footer ul li {
     text-decoration: none;
     list-style: none;
 }
-.list{
+
+.list {
     font-size: small;
     margin: none;
     gap: 17px;
@@ -128,41 +137,121 @@ z-index: 1;
     bottom: 0px;
 }
 
-.playlistImg{
+.songList {
+    display: flex;
+    gap: 5px;
+    overflow: auto  ;
+    margin: 0px 10px;
+}
+
+.songList li{
+    border: 2px black solid ;
+}
+
+
+.songList ol li {
+    padding-left: 0px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: space-around;
+
+
+}
+
+
+
+
+.right {
+    position: relative;
+    min-width: 75%;
+}
+
+.playlistImg {
     height: 192px;
     margin: 0px 20px;
-    
+
 }
-.playlistInfo{
+
+.playlistInfo {
     /* width: 196px; */
     margin: 0px 20px;
 }
 
-.singlePlaylist{
+.singlePlaylist {
     border: 2px black solid;
     margin: 10px 10px;
     position: relative;
 }
 
-.play{
+.play {
     flex-wrap: wrap;
-    
+
     /* max-height: 100vh; */
     /* overflow: scroll; */
 }
 
-.playButton{
+.playButton {
     position: absolute;
     left: 188px;
     top: 230px;
     display: none;
 }
 
-.singlePlaylist:hover .playButton{
+.singlePlaylist:hover .playButton {
     transition-duration: 100ms;
     display: block;
     position: absolute;
     left: 164px;
     top: 145px;
-    height:43px
+    height: 43px
+}
+
+.soundbar {
+    display: flex;
+    background-color: #baffba;
+
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    position: absolute;
+    bottom: 2px;
+    height: 78px;
+    width: 100%;
+}
+
+.controls {
+    width: 216px;
+    display: flex;
+    justify-content: space-between;
+    ;
+    /* justify-content: normal; */
+    /* position: relative; */
+    height: 38px;
+}
+
+.soundButton {
+
+
+    height: 41px;
+
+}
+
+
+.seekBar {
+
+    border: 2px black solid;
+    width: 100%;
+    height: 2px;
+    position: relative;
+}
+
+.seekButton {
+    border: 2px black solid;
+    width: 7px;
+    border-radius: 50%;
+    height: 7px;
+    background-color: black;
+    position: absolute;
+    bottom: -5px;
 }

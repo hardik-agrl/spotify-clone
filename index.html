@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utilities.css">
+    <link rel="icon" href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico">
     <title>Document</title>
 </head>
 
 <body>
     <div class="navbar">
-        <div class="logo " ><img class="" src="spotify.svg" alt="" /></div>
+        <div class="logo "><img class="" src="spotify.svg" alt="" /></div>
         <div class="homeButton flex red-border "><img class="homelogo" src="home.svg" alt=""></div>
         <div class="search "><img class="searchLogo" height="51px" src="search.svg" alt="">
             <label for="searchtext"></label>
@@ -23,10 +24,15 @@
         </div>
     </div>
     <div class="body flex ">
-        <div class="left redBorder">
+        <div class="left blackBorder">
             <div class="library flex">
                 <img class="libraryLogo" src="library.svg" alt="">
                 <h2>Your library</h2>
+            </div>
+            <div class="songList">
+                <ol>
+                    
+                </ol>
             </div>
             <div class="footer ">
                 <ul class="list flex">
@@ -42,29 +48,30 @@
         <div class="right">
             <h2>Playlists</h2>
             <div class="flex play">
-                
-            <div class="singlePlaylist ">
-                <img class="playlistImg" src="https://i.scdn.co/image/ab67706f000000028bc5ca6d7da764ecbf763020" alt="">
-                <img class="playButton" src="play.svg" alt="">
-                <div class="playlistInfo ">
-                    <div class="songName">The hottest 50. </div>
-                    <div class="artist">Cover: ROSÉ</div>
+
+                <div class="singlePlaylist ">
+                    <img class="playlistImg" src="https://i.scdn.co/image/ab67706f000000028bc5ca6d7da764ecbf763020"
+                        alt="">
+                    <img class="playButton" src="play.svg" alt="">
+                    <div class="playlistInfo ">
+                        <div class="songName">The hottest 50. </div>
+                        <div class="artist">Cover: ROSÉ</div>
+                    </div>
                 </div>
+
+
             </div>
 
-
-
-            
-
-
-
-
-
-
-            
-
-        </div>
-
+            <div class="soundbar blackBorder">
+                <div class="controls ">
+                    <img src="prev.svg" alt="   " class="prev soundButton">
+                    <img src="playB.svg" alt="" class="play soundButton">
+                    <img src="next.svg" alt="" class="next soundButton">
+                </div>
+                <div class="seekBar ">
+                    <div class="seekButton"></div>
+                </div>
+            </div>
 
         </div>
     </div>
