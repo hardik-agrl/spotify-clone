@@ -106,7 +106,7 @@
 
 .left {
     min-width: 25%;
-    min-height: 90vh;
+    height: 90vh;
     position: relative;
 
 }
@@ -142,10 +142,16 @@
     gap: 5px;
     overflow: auto  ;
     margin: 0px 10px;
+    height: 69vh;
+
 }
 
 .songList li{
     border: 2px black solid ;
+}
+
+.songList ol{
+    padding: 0px;
 }
 
 
@@ -154,12 +160,18 @@
     display: flex;
     align-items: center;
     gap: 25px;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 10px 0px;
+    height: 75px;
+
 
 
 }
 
+.footer ul{
+    background-color: #baffba;
 
+}
 
 
 .right {
@@ -219,6 +231,13 @@
     height: 78px;
     width: 100%;
 }
+
+.soundbarInfo{
+    display: flex
+;
+    justify-content: space-between;
+    width: 100%;
+} 
 
 .controls {
     width: 216px;
