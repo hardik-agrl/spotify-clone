@@ -2,6 +2,10 @@
     /* background-color: black; */
 }
 
+.point{
+    cursor: pointer;
+}
+
 .flex {
     display: flex;
 
@@ -52,6 +56,7 @@
 .search {
     position: relative;
     display: flex;
+    /* display: none; */
 }
 
 .searchbar {
@@ -64,16 +69,18 @@
 
 }
 
-.search:hover .searchLogo {
+/* .search:hover .searchLogo {
     display: none;
-}
+} */
 
 .searchLogo {
     display: block;
     position: absolute;
-    left: -2px;
-    top: 2px;
+    left: 419px;
+    top: 7px;
     z-index: 1;
+    height: 36px;
+    cursor: pointer;
 }
 
 .signup {
@@ -100,7 +107,10 @@
     font-size: large;
 }
 
+.logo span{
+    font-size: 26px;
 
+}
 
 
 
@@ -163,6 +173,7 @@
     justify-content: space-between;
     margin: 10px 0px;
     height: 75px;
+    cursor: pointer;
 
 
 
@@ -170,6 +181,10 @@
 
 .footer ul{
     background-color: #baffba;
+
+}
+.footer ul li{
+    cursor: pointer;
 
 }
 
@@ -181,18 +196,23 @@
 
 .playlistImg {
     height: 192px;
-    margin: 0px 20px;
+    /* margin: 0px 20px; */
 
+}
+
+.titleName{
+    word-break: break-all;
+    width: 145px;
 }
 
 .playlistInfo {
     /* width: 196px; */
-    margin: 0px 20px;
+    /* margin: 0px 20px; */
 }
 
 .singlePlaylist {
     border: 2px black solid;
-    margin: 10px 10px;
+    margin: 20px 20px;
     position: relative;
 }
 
@@ -200,7 +220,11 @@
     flex-wrap: wrap;
 
     /* max-height: 100vh; */
-    /* overflow: scroll; */
+    /* overflow: auto; */
+}
+
+.play > div{
+    cursor: pointer;
 }
 
 .playButton {
@@ -208,13 +232,19 @@
     left: 188px;
     top: 230px;
     display: none;
+    transition:all 3000ms;
+}
+.playButton:hover {
+    
+    height: 50px;
 }
 
 .singlePlaylist:hover .playButton {
     transition-duration: 100ms;
     display: block;
     position: absolute;
-    left: 164px;
+    left: 143px;
+    
     top: 145px;
     height: 43px
 }
@@ -222,7 +252,7 @@
 .soundbar {
     display: flex;
     background-color: #baffba;
-
+    left: 1px;
     flex-direction: column;
     gap: 15px;
     align-items: center;
@@ -247,6 +277,10 @@
     /* justify-content: normal; */
     /* position: relative; */
     height: 38px;
+}
+
+.controls img{
+    cursor: pointer;
 }
 
 .soundButton {
