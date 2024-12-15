@@ -80,6 +80,7 @@ function playMusic(track) {
   currentTrack.src = "http://127.0.0.1:8080/music/01%20" + track;
 
   currentTrack.play();
+//   console.log(currentTrack.volume)
   play.src = "pause.svg";
   document.querySelector(".titleName").innerHTML = track.slice(0,35)+"..";
   document.querySelector(".duration").innerHTML = "00:00/00:00";
@@ -260,6 +261,25 @@ async function main() {
       (e.offsetX / e.target.getBoundingClientRect().width) *
       currentTrack.duration;
   });
+
+
+
+  document.querySelector(".volscroll").addEventListener("click",element=>{
+    console.log(element.offsetX, element.target.getBoundingClientRect().width)
+    let voldivide = (element.offsetX/ element.target.getBoundingClientRect().width);
+    document.querySelector(".volround").style.left = voldivide *100 +'%';
+  })
+
+  vol.addEventListener("click",element=>{
+    console.log(currentTrack.volume())
+    // if()
+    if(vol.src = "volume.svg"){
+
+        vol.src = "mute.svg";
+    }
+    
+  })
+
 }
 
 main();

@@ -64,7 +64,7 @@
     width: 476px;
     border-radius: 30px;
     border: 2px black solid;
-    height: -webkit-fill-available;
+    
     /* background-color: #212121; */
 
 }
@@ -307,4 +307,31 @@
     background-color: black;
     position: absolute;
     bottom: -5px;
+}
+
+.volume{
+    align-items: center;
+    margin: 2px;
+}
+
+.volume img{
+    height: 25px;
+}
+
+.volscroll{
+    height: 2px;
+    border: 2px red solid;
+    width: 111px;
+    position: relative;
+}
+
+.volround{
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px black solid;
+    position: absolute;
+    left: -2px;
+    top: -3px;
 }
