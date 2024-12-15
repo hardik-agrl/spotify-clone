@@ -143,7 +143,7 @@ async function main() {
         <img src="music.svg" alt="">
         <div class="songcard">
 
-            <div>${song.split("%20-")[1].replaceAll("%20", " ")}</div>
+            <div>${song.split("01%20")[1].replaceAll("%20", " ")}</div>
             <div>Hardik</div>
         </div>
 
