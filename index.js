@@ -1,7 +1,7 @@
 currentTrack = new Audio();
 let songs;
 let index;
-
+let currentvol
 function formatTime(seconds) {
   // Ensure the input is a number
   if (isNaN(seconds) || seconds < 0) {
@@ -23,7 +23,7 @@ async function getSong() {
 
   let div = document.createElement("div");
   div.innerHTML = response;
-  console.log(response)
+  // console.log(response)
   let as = div.getElementsByTagName("a");
   let songs = [];
   for (let index = 0; index < as.length; index++) {
@@ -181,22 +181,36 @@ async function main() {
 
 
 
-  document.querySelector(".volscroll").addEventListener("click",element=>{
-    console.log(element.offsetX, element.target.getBoundingClientRect().width)
-    let voldivide = (element.offsetX/ element.target.getBoundingClientRect().width);
-    document.querySelector(".volround").style.left = voldivide *100 +'%';
-  })
+  // document.querySelector(".volscroll").addEventListener("click",element=>{
+  //   console.log(element.offsetX, element.target.getBoundingClientRect().width)
+  //   let voldivide = (element.offsetX/ element.target.getBoundingClientRect().width);
+  //   document.querySelector(".volround").style.left = voldivide *100 +'%';
+  // })
 
   vol.addEventListener("click",element=>{
-    console.log(currentTrack.volume())
+    console.log(currentTrack.volume)
     // if()
-    if(vol.src = "volume.svg"){
-
-        vol.src = "mute.svg";
+    if(currentTrack.volume>0){
+        currentTrack.volume =0;
+        vol.getElementsByTagName("img")[0].src = "mute.svg";
+        // console.log(currentvol);
     }
+    else{
+      currentTrack.volume = currentvol;
+      vol.getElementsByTagName("img")[0].src = "volume.svg";
+    }
+    
     
   })
 
+  // document.querySelector(".volume").getElementsByTagName("input")[0].addEventListener("change",element=>{
+  // })
+  
+  volscroll.addEventListener("change",(e)=>{
+    currentvol = parseInt(e.target.value)/100;
+    currentTrack.volume = currentvol;
+    // console.log(currentvol);
+  })
 }
 
 main();
