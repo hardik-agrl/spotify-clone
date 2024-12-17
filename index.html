@@ -1,97 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utilities.css">
-    <link rel="icon" href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico">
+    <link
+      rel="icon"
+      href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico"
+    />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="navbar">
-        <div class="logo flex"><img class="point" src="spotify.svg" alt="" /><span> Spotify</span></div>
-        <div class="homeButton flex red-border point"><img class="homelogo" src="home.svg" alt="Home" title="Home">
-        </div>
-        <div class="search "><img class="searchLogo" height="51px" src="search.svg" alt="">
-            <label for="searchtext"></label>
-            <input type="text" class="searchbar" placeholder="Search" id="searchtext">
-        </div>
-        <div class="buttons">
-            <button class="signup  point">Signup</button>
-            <button class="login point">Login</button>
-        </div>
+      <div class="logo flex">
+        <img class="point" src="images/spotify.svg" alt="" /><span>
+          Spotify</span
+        >
+      </div>
+      <div class="homeButton flex red-border point">
+        <img class="homelogo" src="images/home.svg" alt="Home" title="Home" />
+      </div>
+      <div class="search">
+        <img class="searchLogo" height="51px" src="images/search.svg" alt="" />
+        <label for="searchtext"></label>
+        <input
+          type="text"
+          class="searchbar"
+          placeholder="Search"
+          id="searchtext"
+        />
+      </div>
+      <div class="buttons">
+        <button class="signup point">Signup</button>
+        <button class="login point">Login</button>
+      </div>
     </div>
-    <div class="body flex ">
-        <div class="left blackBorder">
-            <div class="library flex">
-                <img class="libraryLogo" src="library.svg" alt="">
-                <h2>Your library</h2>
-            </div>
-            <div class="songList">
-                <ol>
-
-                </ol>
-            </div>
-            <div class="footer ">
-                <ul class="list flex">
-                    <li>legal</li>
-                    <li>Safety &amp; Privacy Center</li>
-                    <li>Privacy Policy</li>
-                    <li>Cookies</li>
-                    <li>About Ads</li>
-                    <li>Accessibility</li>
-                </ul>
-            </div>
+    <div class="body flex">
+      <div class="left blackBorder">
+        <div class="library flex">
+          <img class="libraryLogo" src="images/library.svg" alt="" />
+          <h2>Your library</h2>
         </div>
-        <div class="right">
-            <h2>Playlists</h2>
-            <div class="flex play">
-
-                <div class="singlePlaylist ">
-                    <img class="playlistImg" src="https://i.scdn.co/image/ab67706f000000028bc5ca6d7da764ecbf763020"
-                        alt="">
-                    <img class="playButton" src="play.svg" alt="">
-                    <div class="playlistInfo ">
-                        <div class="songName">The top 50. </div>
-                        <div class="artist">Cover: ROSÉ</div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="soundbar blackBorder">
-                <div class="soundbarInfo">
-                    <div class="titleName">Song Name</div>
-                    <div class="controls ">
-                        <img id="prev" src="prev.svg" alt="   " class="prev soundButton">
-                        <img id="play" src="playB.svg" alt="" class="play soundButton">
-                        <img id="next" src="next.svg" alt="" class="next soundButton">
-                    </div>
-                    <div>
-                        <div class="duration">00:00/00:00</div>
-                        <div class="volume point flex blackBorder">
-                            <div id="vol" class="volimg">
-
-                                <img src="volume.svg" alt="">
-                            </div>
-                            <input id="volscroll" type="range">
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="seekBar point">
-                    <div class="seekButton"></div>
-                </div>
-            </div>
-
+        <div class="songList">
+          <ol></ol>
         </div>
+        <div class="footer">
+          <ul class="list flex">
+            <li>legal</li>
+            <li>Safety &amp; Privacy Center</li>
+            <li>Privacy Policy</li>
+            <li>Cookies</li>
+            <li>About Ads</li>
+            <li>Accessibility</li>
+          </ul>
+        </div>
+      </div>
+      <div class="right">
+        <h2>Playlists</h2>
+        <div class="flex play">
+          <div class="singlePlaylist">
+            <img
+              class="playlistImg"
+              src="https://i.scdn.co/image/ab67706f000000028bc5ca6d7da764ecbf763020"
+              alt=""
+            />
+            <img class="playButton" src="images/play.svg" alt="" />
+            <div class="playlistInfo">
+              <div class="songName">The top 50.</div>
+              <div class="artist">Cover: ROSÉ</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="soundbar blackBorder">
+          <div class="soundbarInfo">
+            <div class="titleName">Song Name</div>
+            <div class="controls">
+              <img
+                id="prev"
+                src="images/prev.svg"
+                alt="   "
+                class="prev soundButton"
+              />
+              <img
+                id="play"
+                src="images/playB.svg"
+                alt=""
+                class="play soundButton"
+              />
+              <img
+                id="next"
+                src="images/next.svg"
+                alt=""
+                class="next soundButton"
+              />
+            </div>
+            <div>
+              <div class="duration">00:00/00:00</div>
+              <div class="volume point flex blackBorder">
+                <div id="vol" class="volimg">
+                  <img src="images/volume.svg" alt="" />
+                </div>
+                <input id="volscroll" type="range" />
+              </div>
+            </div>
+          </div>
+          <div class="seekBar point">
+            <div class="seekButton"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="index.js"></script>
-</body>
-
+  </body>
 </html>

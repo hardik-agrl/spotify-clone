@@ -1,72 +1,74 @@
 * {
-    /* background-color: black; */
+  /* background-color: black; */
 }
 
-.point{
-    cursor: pointer;
+html{
+    background-color: #aeefbf;
+    
+}
+
+.point {
+  cursor: pointer;
 }
 
 .flex {
-    display: flex;
-
+  display: flex;
 }
 
 .redBorder {
-    border: 2px red solid;
+  border: 2px red solid;
 }
 
 .blackBorder {
-    border: 2px black solid;
+  border: 2px black solid;
 }
 
 .logo {
-    position: fixed;
-    left: 20px;
+  position: fixed;
+  left: 20px;
 }
 
 .homeButton {
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: #212121; */
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+    left: 188px;
+  /* background-color: #212121; */
 }
 
 .homelogo {
-    height: 24px;
+  height: 24px;
 }
 
 .homelogo:hover {
-    height: 26px;
+  height: 26px;
 }
 
-
-
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    height: 51px;
-    align-items: center;
-    background-color: #41f970;
-
+  display: flex;
+  justify-content: space-around;
+  height: 51px;
+  align-items: center;
+  background-color: #41f970;
 }
 
 .search {
-    position: relative;
-    display: flex;
-    /* display: none; */
+  position: fixed;
+  display: flex;
+  /* display: none; */
 }
 
 .searchbar {
-    height: 44px;
-    width: 476px;
-    border-radius: 30px;
-    border: 2px black solid;
-    
-    /* background-color: #212121; */
+  height: 44px;
+  width: 476px;
+  border-radius: 30px;
+  border: 2px black solid;
 
+  /* background-color: #212121; */
 }
 
 /* .search:hover .searchLogo {
@@ -74,290 +76,282 @@
 } */
 
 .searchLogo {
-    display: block;
-    position: absolute;
-    left: 419px;
-    top: 7px;
-    z-index: 1;
-    height: 36px;
-    cursor: pointer;
+  display: block;
+  position: absolute;
+  left: 419px;
+  top: 7px;
+  z-index: 1;
+  height: 36px;
+  cursor: pointer;
+}
+
+.buttons{
+    position: fixed;
+    right: 33px;
 }
 
 .signup {
-    height: 49px;
-    width: 80px;
-    background-color: #41f970;
-    /* color: white; */
-    border: none;
+  height: 49px;
+  width: 80px;
+  background-color: #41f970;
+  /* color: white; */
+  border: none;
 }
 
 .signup:hover {
-    font-size: large;
+  font-size: large;
 }
 
 .login {
-    height: 51px;
-    width: 80px;
-    background-color: white;
-    color: black;
-    border-radius: 30px;
+  height: 51px;
+  width: 80px;
+  background-color: white;
+  color: black;
+  border-radius: 30px;
 }
 
 .login:hover {
-    font-size: large;
+  font-size: large;
 }
 
-.logo span{
-    font-size: 26px;
-
+.logo span {
+  font-size: 26px;
 }
-
-
 
 .left {
-    min-width: 25%;
-    height: 90vh;
-    position: relative;
-    background-image: linear-gradient(124deg, #41f970, #e9e9e1);
-
+  min-width: 25%;
+  height: 90vh;
+  position: relative;
+  background-image: linear-gradient(124deg, #41f970, #e9e9e1);
 }
 
 .library {
-    align-items: center;
+  align-items: center;
 }
 
 .libraryLogo {
-    height: 41px;
+  height: 41px;
 }
 
 .library h2 {
-    margin-left: 30px;
-    ;
+  margin-left: 30px;
 }
 
-.footer{
-    display: flex;
-    background-color: #baffba;
-    left: 1px;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    position: absolute;
-    bottom: 2px;
-    height: 77px;
-    width: 100%;
-    border-top: 2px black solid;
-}
-
-.footer ul li {
-    text-decoration: none;
-    list-style: none;
-}
-
-.list {
-    font-size: small;
-    margin: none;
-    gap: 17px;
-    position: absolute;
-    bottom: 0px;
-}
-
-.songList {
-    display: flex;
-    gap: 5px;
-    overflow: auto  ;
-    scrollbar-width: none;
-
-    margin: 0px 10px;
-    height: 69vh;
-
-}
-
-.songList li{
-    border: 2px black solid ;
-}
-
-.songList ol{
-    padding: 0px;
-}
-
-
-.songList ol li {
-    padding-left: 0px;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    justify-content: space-between;
-    margin: 10px 0px;
-    height: 75px;
-    cursor: pointer;
-
-
-
+.footer {
+  display: flex;
+  background-color: #baffba;
+  left: 1px;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  position: absolute;
+  bottom: 2px;
+  height: 77px;
+  width: 100%;
+  border-top: 2px black solid;
 }
 
 .footer ul{
-    /* background-color: #baffba; */
-
-}
-.footer ul li{
-    cursor: pointer;
-
+    padding: 0px 9px;
 }
 
+.footer ul li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.list {
+  font-size: small;
+  margin: none;
+  gap: 17px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.songList {
+  display: flex;
+  gap: 5px;
+  overflow: auto;
+  scrollbar-width: none;
+
+  margin: 0px 10px;
+  height: 69vh;
+}
+
+.songList li {
+  border: 2px black solid;
+}
+
+.songList ol {
+  padding: 0px;
+  width: 100%;
+}
+
+.songList ol li {
+  padding-left: 0px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  justify-content: space-around;
+
+  margin: 10px 0px;
+  height: 75px;
+  cursor: pointer;
+}
+
+.songcard{
+    width: 50%;
+}
+
+.footer ul {
+  /* background-color: #baffba; */
+}
+.footer ul li {
+  cursor: pointer;
+}
 
 .right {
-    border-top: 2px black solid;
-    position: relative;
-    min-width: 75%;
-    background-image: linear-gradient(124deg, #41f970, #e9e9e1);
+  border-top: 2px black solid;
+  position: relative;
+  min-width: 75%;
+  background-image: linear-gradient(124deg, #41f970, #e9e9e1);
 }
 
 .playlistImg {
-    height: 192px;
-    /* margin: 0px 20px; */
-
+  height: 192px;
+  /* margin: 0px 20px; */
 }
 
-.titleName{
-    word-break: break-all;
-    width: 145px;
-    margin-left: 5px;
+.titleName {
+  word-break: break-all;
+  width: 145px;
+  margin: 5px;
 }
 
-.duration{
-    margin-right: 5px;
+.duration {
+  margin-right: 5px;
 }
 
 .playlistInfo {
-    /* width: 196px; */
-    /* margin: 0px 20px; */
+  /* width: 196px; */
+  /* margin: 0px 20px; */
 }
 
 .singlePlaylist {
-    border: 2px black solid;
-    margin: 20px 20px;
-    position: relative;
+  border: 2px black solid;
+  margin: 20px 20px;
+  position: relative;
 }
 
 .play {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 
-    /* max-height: 100vh; */
-    /* overflow: auto; */
+  /* max-height: 100vh; */
+  /* overflow: auto; */
 }
 
-.play > div{
-    cursor: pointer;
+.play > div {
+  cursor: pointer;
 }
 
 .playButton {
-    position: absolute;
-    left: 188px;
-    top: 230px;
-    display: none;
-    transition:all 3000ms;
+  position: absolute;
+  left: 188px;
+  top: 230px;
+  display: none;
+  transition: all 3000ms;
 }
 .playButton:hover {
-    
-    height: 50px;
+  height: 50px;
 }
 
 .singlePlaylist:hover .playButton {
-    transition-duration: 100ms;
-    display: block;
-    position: absolute;
-    left: 143px;
-    
-    top: 145px;
-    height: 43px
+  transition-duration: 100ms;
+  display: block;
+  position: absolute;
+  left: 143px;
+
+  top: 145px;
+  height: 43px;
 }
 
 .soundbar {
-    display: flex;
-    background-color: #baffba;
-    left: 1px;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    position: absolute;
-    bottom: 2px;
-    height: 78px;
-    width: 100%;
+  display: flex;
+  background-color: #baffba;
+  left: 1px;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  position: absolute;
+  bottom: 2px;
+  height: 78px;
+  width: 100%;
 }
 
-.soundbarInfo{
-    display: flex
-;
-    justify-content: space-between;
-    width: 100%;
-} 
+.soundbarInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 
 .controls {
-    width: 216px;
-    display: flex;
-    justify-content: space-between;
-    ;
-    /* justify-content: normal; */
-    /* position: relative; */
-    height: 38px;
+  width: 216px;
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: normal; */
+  /* position: relative; */
+  height: 38px;
 }
 
-.controls img{
-    cursor: pointer;
+.controls img {
+  cursor: pointer;
 }
 
 .soundButton {
-
-
-    height: 41px;
-
+  height: 41px;
 }
 
-
 .seekBar {
-
-    border: 2px black solid;
-    width: 100%;
-    height: 3px;
-    position: relative;
-    top: -8px;
-
+  border: 2px black solid;
+  width: 100%;
+  height: 3px;
+  position: relative;
+  top: -8px;
 }
 
 .seekButton {
-    border: 2px black solid;
-    width: 7px;
-    border-radius: 50%;
-    height: 7px;
-    background-color: black;
-    position: absolute;
-    bottom: -4px;
+  border: 2px black solid;
+  width: 7px;
+  border-radius: 50%;
+  height: 7px;
+  background-color: black;
+  position: absolute;
+  bottom: -4px;
 }
 
-.volume{
-    align-items: center;
-    margin: 2px;
+.volume {
+  align-items: center;
+  margin: 2px;
 }
 
-.volume img{
-    height: 25px;
+.volume img {
+  height: 25px;
 }
 
-.volscroll{
-    height: 2px;
-    border: 2px red solid;
-    width: 111px;
-    position: relative;
+.volscroll {
+  height: 2px;
+  border: 2px red solid;
+  width: 111px;
+  position: relative;
 }
 
-.volround{
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    background-color: black;
-    border: 2px black solid;
-    position: absolute;
-    left: -2px;
-    top: -3px;
+.volround {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px black solid;
+  position: absolute;
+  left: -2px;
+  top: -3px;
 }
