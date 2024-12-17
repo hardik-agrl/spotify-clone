@@ -1,8 +1,6 @@
 currentTrack = new Audio();
 let songs;
-let folders;
 let index;
-let folderUrl
 
 function formatTime(seconds) {
   // Ensure the input is a number
@@ -19,58 +17,26 @@ function formatTime(seconds) {
   return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
 }
 
-async function getFolder() {
-    let url = await fetch("http://127.0.0.1:8080");
-    let response =await url.text();
-
-    let div = document.createElement("div");
-    div.innerHTML = response;
-    let asFolder = div.getElementsByTagName("a")
-    let folders = []
-    for (let index = 0; index < asFolder.length; index++) {
-        const element = asFolder[index];
-        if(element.href.endsWith("/")){
-            let newfolder = element.href.replaceAll(
-                "127.0.0.1:5500",
-                "127.0.0.1:8080"
-              );
-            folders.push(newfolder);
-        }
-        
-    }
-    // console.log(folders);
-    // console.log(asFolder.href);
-    return folders;
-
-
-    
-}
-// getFolder()
-
 async function getSong() {
- folders = await getFolder()
- 
-  let a = await fetch(`${folderUrl}`);
-//   console.log(folders);
-//   let a = await fetch("http://127.0.0.1:8080/music2/");
+  let a = await fetch("http://127.0.0.1:8080/music/");
   let response = await a.text();
 
   let div = document.createElement("div");
   div.innerHTML = response;
+  console.log(response)
   let as = div.getElementsByTagName("a");
   let songs = [];
   for (let index = 0; index < as.length; index++) {
       const element = as[index];
     if (element.href.endsWith(".mp3")) {
-        let newSong = element.href.replaceAll(
-            "127.0.0.1:5500",
-            "127.0.0.1:8080"
-        );
-        console.log(newSong);
+      let newSong = element.href.replaceAll(
+        "127.0.0.1:5500",
+        "127.0.0.1:8080/music"
+      );
       songs.push(newSong);
     }
   }
-  
+
   return songs;
 }
 
@@ -101,38 +67,11 @@ function playMusic(track) {
 // Main Function
 
 async function main() {
-    
-    folders = await getFolder()
-    folderUrl = folders[0];
-    songs = await getSong();
+  songs = await getSong();
   // console.log(songs)
 
   
     //Dynamic creation of listitems
-    // let child = document.createElement("div")
-    let folderUl = document.querySelector(".play")
-    // console.log(folderUl.innerHTML);
-    // folderUl.appendChild(child)
-
-    for (const folder of folders) {
-        // let oldfolderName = folder.split("8080/")[1];
-        // let newFolderName = oldfolderName.splice(0,oldfolderName.length);
-        let newone =  `<div class="singlePlaylist ">
-        <img class="playlistImg" src="https://i.scdn.co/image/ab67706f000000028bc5ca6d7da764ecbf763020"
-            alt="">
-        <img class="playButton" src="play.svg" alt="">
-        <div class="playlistInfo ">
-            <div class="songName"> ${folder.split("8080/")[1].split("/")[0]} </div>
-            <div class="artist">Cover: ROSÉ</div>
-        </div>
-    </div> `
-
-    folderUl.innerHTML = folderUl.innerHTML+ newone
-        // console.log(child.innerHTML);
-    }
-
-
-
 
   let songUL = document
     .querySelector(".songList")
@@ -155,20 +94,6 @@ async function main() {
 
     songUL.innerHTML = songUL.innerHTML + newsong;
   }
-
-
-  //Event Listener for Folder Selection
-  Array.from(document.querySelectorAll(".singlePlaylist")).forEach((e)=>{
-    e.addEventListener("click",(element)=>{
-        CurrentFolder = e.querySelector(".songName").innerHTML.trim()
-        folderUrl = `http://127.0.0.1:8080/${CurrentFolder}/`
-        console.log(e.querySelector(".songName").innerHTML)
-        console.log(folderUrl)
-
-        
-    })
-  })
-
 
   //Event Listener for PlayCard
 
@@ -216,24 +141,16 @@ async function main() {
   //Event listener for next
 
   next.addEventListener("click",element=>{
-    if(index<songs.length-1){
+    // if(index>0){
 
         let nextsong = document.querySelector(".songList").getElementsByTagName("li")[index+1]
         playMusic(nextsong.querySelector(".songcard").firstElementChild.innerHTML)
-    }
+    // }
     
         // playMusic(songs[index-1]);
       
   })
 
-
-
-  
-
-//   Array.from(document.querySelectorAll(".singlePlaylist")).forEach().addEventListener("click",()=>{
-//     // folderUrl = 
-//     console.log(document.querySelector(".singlePlaylist").querySelector(".songName").innerHTML);
-//   })
   
 
   //Event Listener for Current Track
