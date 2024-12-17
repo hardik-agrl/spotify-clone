@@ -19,7 +19,7 @@ function formatTime(seconds) {
 async function getSong() {
   // let a = await fetch("http://127.0.0.1:5500/music%20folder/music/");
   let a = await fetch(
-    "http://127.0.0.1:5500/music%20folder/Non%20Copyright%201/"
+    "https://hardik-spotify.netlify.app/music%20folder/Non%20Copyright%201/"
   );
   let response = await a.text();
 
@@ -45,7 +45,7 @@ async function getSong() {
 
 function playMusic(track) {
   currentTrack.src =
-    "http://127.0.0.1:5500/music%20folder/Non%20Copyright%201/-" + track;
+    "https://hardik-spotify.netlify.app/music%20folder/Non%20Copyright%201/-" + track;
 
   currentTrack.play();
 
@@ -55,7 +55,7 @@ function playMusic(track) {
   document.querySelector(".titleName").innerHTML = track.slice(0, 35) + "..";
   document.querySelector(".duration").innerHTML = "00:00/00:00";
   let songname =
-    "http://127.0.0.1:5500/music%20folder/Non%20Copyright%201/-" +
+    "https://hardik-spotify.netlify.app/music%20folder/Non%20Copyright%201/-" +
     encodeURI(track);
   index = songs.indexOf(songname);
 }
