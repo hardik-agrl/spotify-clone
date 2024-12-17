@@ -18,7 +18,9 @@ function formatTime(seconds) {
 
 async function getSong() {
   // let a = await fetch("http://127.0.0.1:5500/music%20folder/music/");
-  let a = await fetch("http://127.0.0.1:5500/music%20folder/Non%20Copyright%201/");
+  let a = await fetch(
+    "http://127.0.0.1:5500/music%20folder/Non%20Copyright%201/"
+  );
   let response = await a.text();
 
   let div = document.createElement("div");
@@ -35,7 +37,6 @@ async function getSong() {
       //   "127.0.0.1:8080/music"
       // );
       songs.push(newSong);
-      
     }
   }
 
@@ -43,16 +44,19 @@ async function getSong() {
 }
 
 function playMusic(track) {
-  currentTrack.src = "http://127.0.0.1:5500/music%20folder/Non%20Copyright%201/-" + track;
-  
+  currentTrack.src =
+    "http://127.0.0.1:5500/music%20folder/Non%20Copyright%201/-" + track;
+
   currentTrack.play();
-  
-  console.log(currentTrack)
+
+  console.log(currentTrack);
 
   play.src = "images/pause.svg";
   document.querySelector(".titleName").innerHTML = track.slice(0, 35) + "..";
   document.querySelector(".duration").innerHTML = "00:00/00:00";
-  let songname = "http://127.0.0.1:5500/music%20folder/Non%20Copyright%201/-" + encodeURI(track);
+  let songname =
+    "http://127.0.0.1:5500/music%20folder/Non%20Copyright%201/-" +
+    encodeURI(track);
   index = songs.indexOf(songname);
 }
 
@@ -91,7 +95,6 @@ async function main() {
     document.querySelector(".songList").getElementsByTagName("li")
   ).forEach((e) => {
     e.addEventListener("click", (element) => {
-
       // console.log(e.querySelector(".songcard").firstElementChild.innerHTML);
       playMusic(e.querySelector(".songcard").firstElementChild.innerHTML);
     });

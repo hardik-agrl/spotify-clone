@@ -2,9 +2,8 @@
   /* background-color: black; */
 }
 
-html{
-    background-color: #aeefbf;
-    
+html {
+  background-color: #aeefbf;
 }
 
 .point {
@@ -36,7 +35,7 @@ html{
   align-items: center;
   justify-content: center;
   position: fixed;
-    left: 188px;
+  left: 188px;
   /* background-color: #212121; */
 }
 
@@ -85,9 +84,9 @@ html{
   cursor: pointer;
 }
 
-.buttons{
-    position: fixed;
-    right: 33px;
+.buttons {
+  position: fixed;
+  right: 33px;
 }
 
 .signup {
@@ -151,8 +150,8 @@ html{
   border-top: 2px black solid;
 }
 
-.footer ul{
-    padding: 0px 9px;
+.footer ul {
+  padding: 0px 9px;
 }
 
 .footer ul li {
@@ -199,8 +198,8 @@ html{
   cursor: pointer;
 }
 
-.songcard{
-    width: 50%;
+.songcard {
+  width: 50%;
 }
 
 .footer ul {
@@ -233,11 +232,13 @@ html{
 }
 
 .playlistInfo {
+  padding: 0px 5px;
   /* width: 196px; */
   /* margin: 0px 20px; */
 }
 
 .singlePlaylist {
+  background-color: #f7d6c3;
   border: 2px black solid;
   margin: 20px 20px;
   position: relative;
