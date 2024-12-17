@@ -313,7 +313,7 @@ html{
 
 .seekBar {
   border: 2px black solid;
-  width: 100%;
+  width: 98%;
   height: 3px;
   position: relative;
   top: -8px;
